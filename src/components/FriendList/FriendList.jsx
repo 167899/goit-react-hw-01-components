@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from "./FriendList.module.css";
 import { FriendListItem } from "../FriendListItem/FriendListItem";
 
@@ -7,4 +8,8 @@ export const FriendList = ({ friends }) => {
       {friends.map((e) => <FriendListItem key={e.id.toString()} avatar={e.avatar} name={e.name} isOnline={e.isOnline} />)}
 </ul>
   );
+}
+
+FriendList.propTypes = {
+  friends: PropTypes.array
 }
